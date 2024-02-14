@@ -1,0 +1,45 @@
+<pre>--- Summary ---
+Tests passed: 2 out of 4
+
+--- Details ---
+Test #0: failed 
+Test case description: ML4T-220
+Traceback:
+  File "grade_strategy_learner.py", line 445, in test_strategy
+    " Failures:\n{}".format(inputs_str, "\n".join(msgs))
+IncorrectOutput: Test failed on one or more output criteria.
+  Inputs:
+    insample_args: {'symbol': 'ML4T-220', 'sd': datetime.datetime(2008, 1, 1, 0, 0), 'ed': datetime.datetime(2009, 12, 31, 0, 0), 'sv': 100000}
+    outsample_args: {'symbol': 'ML4T-220', 'sd': datetime.datetime(2010, 1, 1, 0, 0), 'ed': datetime.datetime(2011, 12, 31, 0, 0), 'sv': 100000}
+    benchmark_type: clean
+    benchmark: 1.0
+    train_time: 25
+    test_time: 5
+    max_time: 60
+    seed: 1481090000
+
+  Failures:
+  add_evidence() took 44.86026096343994 seconds, max allowed 25
+
+Test #1: passed 
+Test #2: failed 
+Test case description: SINE_FAST_NOISE
+Traceback:
+  File "grade_strategy_learner.py", line 445, in test_strategy
+    " Failures:\n{}".format(inputs_str, "\n".join(msgs))
+IncorrectOutput: Test failed on one or more output criteria.
+  Inputs:
+    insample_args: {'symbol': 'SINE_FAST_NOISE', 'sd': datetime.datetime(2008, 1, 1, 0, 0), 'ed': datetime.datetime(2009, 12, 31, 0, 0), 'sv': 100000}
+    outsample_args: {'symbol': 'SINE_FAST_NOISE', 'sd': datetime.datetime(2010, 1, 1, 0, 0), 'ed': datetime.datetime(2011, 12, 31, 0, 0), 'sv': 100000}
+    benchmark_type: noisy
+    benchmark: 2.0
+    train_time: 25
+    test_time: 5
+    max_time: 60
+    seed: 1481090000
+
+  Failures:
+  in-sample return (0.3257117346660001) did not beat benchmark (2.0)
+
+Test #3: passed 
+</pre>
